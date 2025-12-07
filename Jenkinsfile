@@ -26,7 +26,7 @@ pipeline {
                 }
              }
         }
-        stage('install dependecies') {
+        stage('Install dependecies') {
             steps {
                sh """
                    npm install
@@ -35,7 +35,7 @@ pipeline {
                """
             }
         }
-        stage('build'){
+        stage('Build'){
              steps{
                 sh """
                 zip -q -r backend-${appVersion}.zip * -x Jenkinsfile -x backend-${appVersion}.zip
